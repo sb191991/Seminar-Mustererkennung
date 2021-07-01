@@ -1,9 +1,12 @@
 \chapter{Convolutional Neural Networks}
-In den letzten Jahren haben Convolutional Neural Networks (CNN) in Zusammenhang mit Mustererkennung wie zum Beispiel Bildklassifizierung oder Spracherkennung bahnbrechende Ergebnisse erzielt \cite{bilderkennung}. Bei Bildklassifizierungen liefern CNNs die besten Ergebnisse \cite{imagenet}. Ein großer Vorteil bei CNNs ist, dass eine Reduzierung der Parameter stattfindet und dadurch größere Modelle mit komplexen Aufgaben im Anschluss besser klassifiziert werden können \cite{bilderkennung}. CNN ist ein hierarchisches neuronales Netz, welches aus unterschiedlichen Schichten (layers) besteht \cite{badshah2019deep}. Diese Schichten kann man in drei Hauptkomponenten aufteilen (siehe Abbildung \ref{architektur}.
+In diesem Kapitel wird der Aufbau und Funktionsweise von CNN Architekturen erklärt und erläutert.\newline\newline
+In den letzten Jahren haben Convolutional Neural Networks (CNN) in Zusammenhang mit Mustererkennung wie zum Beispiel Bildklassifizierung oder Spracherkennung bahnbrechende Ergebnisse erzielt \cite{bilderkennung}. Bei Bildklassifizierungen liefern CNN Architekturen die besten Ergebnisse \cite{imagenet}. Ein großer Vorteil bei CNN Architekturen ist, dass eine Reduzierung der Parameter Schicht für Schicht stattfindet und dadurch größere Modelle mit komplexen Aufgaben im Anschluss besser klassifiziert werden können \cite{bilderkennung}. CNN ist ein hierarchisches neuronales Netz, welches aus unterschiedlichen Schichten (layers) besteht \cite{badshah2019deep}. Diese Schichten kann man in drei Hauptkomponenten aufteilen (siehe Abbildung \ref{architektur}).
 \begin{itemize}
-	\item  convolutional layers \newline diese Schicht ist für das Filtern des Inputs zuständig \cite{badshah2019deep}
-	\item  pooling layers 
-	\item  fully connected layers
-	
+	\item  \textbf{convolutional layers} \cite{badshah2019deep} 
+	\item  \textbf{pooling layers} \cite{badshah2019deep}
+	\item  \textbf{fully connected layers} \cite{badshah2019deep}
 \end{itemize}
 
+Bei den \textbf{convolutional layers} kommt ein Faltungsfilter zum Einsatz, welcher auf den Input (Bild/Spektrogramm) angewendet wird. \cite{badshah2019deep}.\newline 
+\textbf{pooling layers:} In den ersten Schichten werden einfache Merkmale wie zum Beispiel einzelne Bildpixel und Kanten in Betracht gezogen. Danach werden Schicht für Schicht Merkmalsextraktion und Abstraktionen auf höherer Ebene durchgeführt und Unterscheidungsmerkmale identifiziert \cite{badshah2019deep}. Hier findet also eine Reduzierung der Dimensionalität statt, welche im Einführungstext in diesem Kapitel als ein Vorteil von CNN erwähnt wurde. Der am häufigsten verwendete Pooling-Algorithmus ist der sogennante max pooling, welcher die Maximalwerte behält. \cite{badshah2019deep}.\newline \newline
+\textbf{Fully connected layers} sind für die globale Repräsentation der Faltungsmerkmale und Klassifikationen zuständig \cite{badshah2019deep}. Diese Merkmale werden dann in einem sogenannten Softmax-Klassifikator übergen, welcher dann für jede Klasse der Faltungen die Wahrscheinlichkeiten generiert. 
